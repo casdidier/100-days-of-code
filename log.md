@@ -35,3 +35,14 @@ So far, I'm liking Hooks. They seem cleaner and more straightforward than the Cl
 - [Added files for Entries](https://github.com/ndjamenamarmon/chaicms/commit/5633a4af3a19e8aed90f298be238cded9886aeda)
 - [Changed SettingsForm to function component with hooks](https://github.com/ndjamenamarmon/chaicms/commit/b9e8a71dfdea13cc68c4baf2f6876c13428c3fb0)
 - [Changed ContentTypeForm to functional component with Hooks, created custom useSlugify hook](https://github.com/ndjamenamarmon/chaicms/commit/7c1fa8d44f2f045bb60d86ab551898b0b346c30b)
+
+
+### Day 4: November 5, Monday
+
+**Today's Progress**: Today I continued building out the Entries functionality for ChaiCMS, focusing on the EntryForm. I changed the EntryForm component from a class component to a function component, and implemented Hooks to handle state.
+
+**Thoughts:** Working with the Entries functionality is an interesting challenge since they are meant to have dynamic fields. Unlike Content Types or Fields, I don't know what the fields are going to be, so I have to build with that in mind. Up to now I have been outputting form fields and object properties that I know the object must have, but with Entries the object properties could be anything. 
+
+I am loving working with Hooks. Changing from the Class component to the Function component was a relief and I had to think about this.props.whatever and this.state.whatever less, and just code!
+
+**Link(s) to work:** [Changed EntryForm to functional components with Hooks, started building it out; fixed some bugs](https://github.com/ndjamenamarmon/chaicms/commit/31431f057ce08c42fb43162dd6787e7002d4d5f1)
