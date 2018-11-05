@@ -16,3 +16,16 @@
 **Thoughts:** I feel like I made fast progress building out the components I worked on today, helped by the boilerplate project from the React Udemy course I just completed. So far, I am feeling pretty comfortable modifying the boilerplate code to build what I need. Tomorrow I plan on creating the tests for the Sidebar and Settings components, actions, and reducers.
 
 **Link(s) to work:** [PR #2](https://github.com/ndjamenamarmon/chaicms/pull/2)
+
+
+### Day 3: November 4, Sunday
+
+**Today's Progress**: I built out Content Types, Fields, and the start of Entries for ChaiCMS, including updating the Sidebar to populate content types dynamically. I built a basic integration of fields with content types.
+
+**Thoughts:** I know I was planning on building out all the tests for the Sidebar and Settings components, actions, and reducers today, but I found myself much more interested in building rather than testing. I will need to build out the tests at some point, but it is interesting observing myself and my tendencies. I love working with the more visual aspects of coding and being able to see what I am creating. Tests seem more like a have to do task rather than a want to do.
+
+**Link(s) to work:**
+- [Added basic Content Types functionality](https://github.com/ndjamenamarmon/chaicms/commit/afc570f367e1186f85ef2ad17962f1b7bc0e1d08)
+- [Moved Content Types to folder](https://github.com/ndjamenamarmon/chaicms/commit/eb54e61b0d6763541e7591cdfba597b4ed27400f)
+- [Added Fields functionality and basic integration with content types](https://github.com/ndjamenamarmon/chaicms/commit/0026a96b160c260af939abd2eb7ad4d6da7be4d5)
+- [Added files for Entries](https://github.com/ndjamenamarmon/chaicms/commit/5633a4af3a19e8aed90f298be238cded9886aeda)
