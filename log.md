@@ -46,3 +46,16 @@ So far, I'm liking Hooks. They seem cleaner and more straightforward than the Cl
 I am loving working with Hooks. Changing from the Class component to the Function component was a relief and I had to think about this.props.whatever and this.state.whatever less, and just code!
 
 **Link(s) to work:** [Changed EntryForm to functional components with Hooks, started building it out; fixed some bugs](https://github.com/ndjamenamarmon/chaicms/commit/31431f057ce08c42fb43162dd6787e7002d4d5f1)
+
+
+### Day 5: November 6, Tuesday
+
+**Today's Progress**: Today I continued building out the Entries functionality for ChaiCMS, working on handling the EntryForm submission of data to the database. I also worked on implementing the list of entries per content type. 
+
+**Thoughts:** Submitting entry data was an interesting little challenge since the fields and consequently key-value pairs in each entry object could vary and would need to be dynamic depending on the fields available for the content type. I had an issue where React didn't like me updating the entry state whose initial value was an empty object ```{}``` but when edited had key value pairs. It was expecting the empty state to already have those keys with some default data: ```{ key: "" }```.
+
+I tried using a useEffect() hook to populate the state immediately after render and before the text input was used by the user, but that didn't work either. I then passed the calculated state (with all keys that would be used based on the fields available in the content type) from the parent component as a prop and passed that into useState() as the default state, and that worked well. 
+
+**Link(s) to work:**
+- [Add entry functionality and saving to db](https://github.com/ndjamenamarmon/chaicms/commit/9c4aeb817895bafdb4469fda8a33390d218885aa)
+- [Wired up Entries List on Entries page](https://github.com/ndjamenamarmon/chaicms/commit/0178c875dfc7d155b21ff20e158af9cecd4684f4)
