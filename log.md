@@ -59,3 +59,15 @@ I tried using a useEffect() hook to populate the state immediately after render 
 **Link(s) to work:**
 - [Add entry functionality and saving to db](https://github.com/ndjamenamarmon/chaicms/commit/9c4aeb817895bafdb4469fda8a33390d218885aa)
 - [Wired up Entries List on Entries page](https://github.com/ndjamenamarmon/chaicms/commit/0178c875dfc7d155b21ff20e158af9cecd4684f4)
+
+
+### Day 6: November 7, Wednesday
+
+**Today's Progress**: Today I worked on the Edit Entry functionality for ChaiCMS. I then changed the route where the edit entry page would live to ```/entry/:slug/edit/:id``` and fixed the affected components. Finally, I wiped the database to start from a clean slate for further building, and fixed some issues that came from the empty database. 
+
+**Thoughts:** Today's work was pretty straightforward. I learned more about passing multiple objects as props using the spread operator. I also had to figure out how to debug an issue with an action where it appeared that the updates being passed to it weren't getting through. It ended up being fairly simple once I figured it out.
+
+**Link(s) to work:**
+- [Added edit entry functionality](https://github.com/ndjamenamarmon/chaicms/commit/0f3abd7390a8185f244d68fa98d505b9a0e6a7d3)
+- [Reconfigured the edit entries page to live at /entry/:slug/edit/:id to match with other pages, fixed sidebar to show current content type](https://github.com/ndjamenamarmon/chaicms/commit/abd42977d60627b9b0a1103d7128768bb5c42473)
+- [Fixed issues caused when database was wiped](https://github.com/ndjamenamarmon/chaicms/commit/a70e624ee04d4332307f48e191b0450899fa895c)
