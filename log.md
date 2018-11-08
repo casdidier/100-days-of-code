@@ -71,3 +71,16 @@ I tried using a useEffect() hook to populate the state immediately after render 
 - [Added edit entry functionality](https://github.com/ndjamenamarmon/chaicms/commit/0f3abd7390a8185f244d68fa98d505b9a0e6a7d3)
 - [Reconfigured the edit entries page to live at /entry/:slug/edit/:id to match with other pages, fixed sidebar to show current content type](https://github.com/ndjamenamarmon/chaicms/commit/abd42977d60627b9b0a1103d7128768bb5c42473)
 - [Fixed issues caused when database was wiped](https://github.com/ndjamenamarmon/chaicms/commit/a70e624ee04d4332307f48e191b0450899fa895c)
+
+
+### Day 7: November 8, Thursday
+
+**Today's Progress**: Today I worked on the add page for content types to redirect to the edit page after a new content type is created. I also added the createdAt and lastUpdated properties to content type database entries. Finally, I changed content types and fields to use apiKey instead of slug in camelCase instead of slug-format.
+
+**Thoughts:** I wanted the add content type page to redirect to the content type's edit page after it was edited so the user could continue to work on it if they chose instead of redirecting to the list of content types. I ran into an issue where dispatching the startAddContentType action did not return any of the data that firebase return with the generated ID that I would need to redirect to the edit page for that content type. I tried adding a promise ```.then(()=>{})``` to the action, but that didn't work. After a bit of Googling, it seemed that action dispatches were supposed to be "fire and forget," and not return something back after the action was fired.
+
+So then I added createdAt to the content type properties and updated the selector to accept sorts by createdAt. In this way I was able to sort the content types in the state (that was updated in the action) by createdAt and grab the ID of the newest one and use that for the redirect to the edit page. I still did need to add the promise to the action dispatch on the add page so I got the latest state after it resolved.
+
+**Link(s) to work:**
+- [Added createdAt and lastUpdated to content types, modified content type selector to include different sorts, redirect to content type edit page after add](https://github.com/ndjamenamarmon/chaicms/commit/977a1206a0d45e83a7a61ea1756f2d604c0992dd)
+- [Changed slug field to API Key in content types and fields with camelCase format](https://github.com/ndjamenamarmon/chaicms/commit/9af9905bb797e36b8a13e6b2df1cc76e1f91a05a)
