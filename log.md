@@ -84,3 +84,17 @@ So then I added createdAt to the content type properties and updated the selecto
 **Link(s) to work:**
 - [Added createdAt and lastUpdated to content types, modified content type selector to include different sorts, redirect to content type edit page after add](https://github.com/ndjamenamarmon/chaicms/commit/977a1206a0d45e83a7a61ea1756f2d604c0992dd)
 - [Changed slug field to API Key in content types and fields with camelCase format](https://github.com/ndjamenamarmon/chaicms/commit/9af9905bb797e36b8a13e6b2df1cc76e1f91a05a)
+
+
+### Day 8: November 9, Friday
+
+**Today's Progress**: Today for ChaiCMS I moved the styles into a theme folder and added the option to use a node environment variable to change the theme. I also added createdAt and lastUpdated properties to fields. Finally I continued to build out the field add/edit form to include help text, is required checkbox, and is unique checkbox along with some aesthetic/accessibility changes with labels and required field notes.
+
+**Thoughts:** Trying to figure out how to make webpack compile a theme dynamically from a variable in a path was a difficult challege. I tried to use template strings in an import statement, but that didn't work. Eventually I settled on a require using a node environment variable. However, I wanted to be able to import/require the styles after getting the theme variable from the firebase database, but couldn't figure out how to do that.
+
+The other updates I did today were straightforward and fun to do. It's nice to see what I have planned for this project slowly come to life on the screen.
+
+**Link(s) to work:**
+- [Moved styles into default theme, added theme environment variable](https://github.com/ndjamenamarmon/chaicms/commit/60985bd553bd363d7326616703014e4ee4ab86fa)
+- [Add createdAt and lastUpdated to fields, move createdAt and lastUpdated calculations to onSubmit for freshest time](https://github.com/ndjamenamarmon/chaicms/commit/50277bd7139d48c1402e464e77269f9cb109486b)
+- [Added helpText, isRequired, and isUnique properties to fields, added labels and required text in field form](https://github.com/ndjamenamarmon/chaicms/commit/0395eb1a884c72f63387e9d51fcc194e7762e54d)
