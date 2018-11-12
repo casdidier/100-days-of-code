@@ -98,3 +98,17 @@ The other updates I did today were straightforward and fun to do. It's nice to s
 - [Moved styles into default theme, added theme environment variable](https://github.com/ndjamenamarmon/chaicms/commit/60985bd553bd363d7326616703014e4ee4ab86fa)
 - [Add createdAt and lastUpdated to fields, move createdAt and lastUpdated calculations to onSubmit for freshest time](https://github.com/ndjamenamarmon/chaicms/commit/50277bd7139d48c1402e464e77269f9cb109486b)
 - [Added helpText, isRequired, and isUnique properties to fields, added labels and required text in field form](https://github.com/ndjamenamarmon/chaicms/commit/0395eb1a884c72f63387e9d51fcc194e7762e54d)
+
+
+### Day 9: November 10, Saturday
+
+**Today's Progress**: Today for ChaiCMS I updated the display, styling, and sorting (to alphabetical) for the field list. I also updated the content type form to include a modal for selecting fields to add to the content type, and added the title field property to designate which field should act as the title of the entry. Finally, I fixed bugs in the Entry pages caused by the earlier change in content types and forms to go from using a slug to an apiKey.
+
+**Thoughts:** Today's updates were pretty straightforward. I was feeling tired after the week so was glad to have some easy pickings with this side project to still get some practice in but not tackle anything too challenging.
+
+I worked with the react-modal plugin to implement the modal for selecting the fields. I'm not sure that I will be keeping this implementation. If I do I will definitely want to change the UI and spruce it up a bit, I'm not crazy about how it's looking right now.
+
+**Link(s) to work:**
+- [Updated field list: display and styling, alphabetical sort](https://github.com/ndjamenamarmon/chaicms/commit/3e58da76eeed8f400382026bb0e206231e49254a)
+- [Added field selection modal and title field property to content type form](https://github.com/ndjamenamarmon/chaicms/commit/9bd4796d57ad136c606a306c4b598106ccc7dd7b)
+- [Fixed bugs in entries pages caused by recent changes slug -> apiKey in content types and fields](https://github.com/ndjamenamarmon/chaicms/commit/f983655c0a0f96fccbb04c189240577a9fbab140)
