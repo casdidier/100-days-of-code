@@ -112,3 +112,17 @@ I worked with the react-modal plugin to implement the modal for selecting the fi
 - [Updated field list: display and styling, alphabetical sort](https://github.com/ndjamenamarmon/chaicms/commit/3e58da76eeed8f400382026bb0e206231e49254a)
 - [Added field selection modal and title field property to content type form](https://github.com/ndjamenamarmon/chaicms/commit/9bd4796d57ad136c606a306c4b598106ccc7dd7b)
 - [Fixed bugs in entries pages caused by recent changes slug -> apiKey in content types and fields](https://github.com/ndjamenamarmon/chaicms/commit/f983655c0a0f96fccbb04c189240577a9fbab140)
+
+
+### Day 10: November 11, Sunday
+
+**Today's Progress**: Today for ChaiCMS I implemented a Markdown WYSIWYG editor for markdown entry fields using the react-draft-wysiwyg plugin built on DraftJS.
+
+**Thoughts:** I was feeling a bit burned out by coding this weekend, so I wanted to just get my hour done and be done for the day. Getting the markdown editor working with my entry form was a bit of a challenge though, so I ended up getting a bit sucked into it. First I had an issue importing the package, getting an error that the draft-js node module did not exist. I was about to put in an issue ticket when I noticed other had had the same issue, and that the fix was to install the draft-js peer dependency. The react-draft-wysiwyg could have made that clearer in the installation instructions!
+
+After that I tried adding the editor to my entry form component but ran into issues because it didn't allow the props I needed to let my on change handler know which field was tied to which editor and which part of the state. I finally moved it into its own component with its own state, letting its own on change handlers send the data back to my parent component to deal with the entry state.
+
+I also needed to install a couple of other plugins to convert markdown stored in the database to a draft-js object for the editor to handle, and to convert that object back into markdown for saving into the database. This whole process took a lot of time and Googling and Stackoverflow ... it could definitely have been better documented. I'm thinking I should write a blog post about it.
+
+**Link(s) to work:**
+- [Added markdown wysiwyg editor for markdown entry fields](https://github.com/ndjamenamarmon/chaicms/commit/023ae6f2350c091defa07e93b4280139ac532caf)
