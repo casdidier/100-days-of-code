@@ -118,7 +118,7 @@ I worked with the react-modal plugin to implement the modal for selecting the fi
 
 **Today's Progress**: Today for ChaiCMS I implemented a Markdown WYSIWYG editor for markdown entry fields using the react-draft-wysiwyg plugin built on DraftJS.
 
-**Thoughts:** I was feeling a bit burned out by coding this weekend, so I wanted to just get my hour done and be done for the day. Getting the markdown editor working with my entry form was a bit of a challenge though, so I ended up getting a bit sucked into it. First I had an issue importing the package, getting an error that the draft-js node module did not exist. I was about to put in an issue ticket when I noticed other had had the same issue, and that the fix was to install the draft-js peer dependency. The react-draft-wysiwyg could have made that clearer in the installation instructions!
+**Thoughts:** I was feeling a bit burned out by coding this weekend, so I wanted to just get my hour done and be done for the day. Getting the markdown editor working with my entry form was a bit of a challenge though, so I ended up getting a bit sucked into it. First I had an issue importing the package, getting an error that the draft-js node module did not exist. I was about to put in an issue ticket when I noticed others had had the same issue, and that the fix was to install the draft-js peer dependency. The react-draft-wysiwyg could have made that clearer in the installation instructions!
 
 After that I tried adding the editor to my entry form component but ran into issues because it didn't allow the props I needed to let my on change handler know which field was tied to which editor and which part of the state. I finally moved it into its own component with its own state, letting its own on change handlers send the data back to my parent component to deal with the entry state.
 
@@ -140,3 +140,18 @@ Like the markdown editor I had issues getting the datepicker to work until I mov
 - [Added slug field functionality](https://github.com/ndjamenamarmon/chaicms/commit/ce780c08904c46cf23dcf5ae221a36dfcbf45941)
 - [Added Required and Help Text to Entry Form](https://github.com/ndjamenamarmon/chaicms/commit/7cb0a36d273e9de57194889d6df3a715f6e1c7ff)
 - [Added Date only field display to entries/fields with react-dates Datepicker](https://github.com/ndjamenamarmon/chaicms/commit/1ad956677966a1c7cda47a4c68ac14b42bda6061)
+
+
+### Day 12: November 13, Tuesday
+
+**Today's Progress**: Today for ChaiCMS I tried adding an image in the markdown editor, and though it worked well initially and saved the image markdown to the database, on re-load it would not display it. I looked into the plugin I am using to convert the markdown to the draft js format, and did a lot of Googling, but didn't have any luck figuring it out today. After about 20-30 minutes I stopped to work on something else as I wanted to get some updates committed.
+
+I worked on enforcing the uniqueness of api keys for content types and fields, and making api keys readonly after creation.
+
+**Thoughts:** It was a bit frustrating not having the time to figure out what was going on with the markdown editor (and why isn't instructions for how to get it to work right documented anywhere?!).
+
+Enforcing the uniqueness of api keys is currently based on the state at the time the add/edit form is visited. I'm thinking it should be changed to pulling from the database, at least when validating during submission (so as not to slow down the user experience). 
+
+**Link(s) to work:**
+- [Enforce uniqueness of content type api keys](https://github.com/ndjamenamarmon/chaicms/commit/9202c418211e9eb3ced7018ff0edd84667973d02)
+- [Enforce uniqueness of field api keys, make api keys of content types and fields readonly when editing](https://github.com/ndjamenamarmon/chaicms/commit/cdd344af86ddaa1cb53308335492c524f79551e7)
