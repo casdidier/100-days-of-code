@@ -126,3 +126,17 @@ I also needed to install a couple of other plugins to convert markdown stored in
 
 **Link(s) to work:**
 - [Added markdown wysiwyg editor for markdown entry fields](https://github.com/ndjamenamarmon/chaicms/commit/023ae6f2350c091defa07e93b4280139ac532caf)
+
+
+### Day 11: November 12, Monday
+
+**Today's Progress**: Today for ChaiCMS I added functionality for slug field types in the entry form that would be populated by "slugifying" the title field of the entry. I also added Required notes and help text to the entry form. Finally, I added the Date only field type, using react-dates to display a datepicker.
+
+**Thoughts:** Today's updates were pretty straightforward, and I'm happy with the progress I am making on the entry form. I'm feeling pretty comfortable working with React in this project by now.
+
+Like the markdown editor I had issues getting the datepicker to work until I moved it into its own component with its own state. I still need to build out the Date and Time fields, as I only have Date for now.
+
+**Link(s) to work:**
+- [Added slug field functionality](https://github.com/ndjamenamarmon/chaicms/commit/ce780c08904c46cf23dcf5ae221a36dfcbf45941)
+- [Added Required and Help Text to Entry Form](https://github.com/ndjamenamarmon/chaicms/commit/7cb0a36d273e9de57194889d6df3a715f6e1c7ff)
+- [Added Date only field display to entries/fields with react-dates Datepicker](https://github.com/ndjamenamarmon/chaicms/commit/1ad956677966a1c7cda47a4c68ac14b42bda6061)
